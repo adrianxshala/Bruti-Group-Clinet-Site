@@ -30,9 +30,11 @@ const Sherbimet = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10 py-20">
-        <h2 className="text-4xl font-bold mb-16 text-center text-white glow">
-          Shërbimet Tona
-        </h2>
+      <h2 className="text-4xl font-bold mb-16 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow">
+  Shërbimet Tona
+</h2>
+
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sherbimet.map((sherbim, index) => (
             <motion.div
