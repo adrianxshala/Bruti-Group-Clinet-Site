@@ -3,8 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Autoplay,
   EffectCoverflow,
-  EffectFade,
-  Navigation,
+  
   Pagination,
 } from "swiper/modules";
 import "swiper/css";

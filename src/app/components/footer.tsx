@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, Mail, MapPin, Phone } from "lucide-react";
+import {  Mail, MapPin, Phone } from "lucide-react";
 import logo from "../../../public/assets/llogo.png";
 import Image from "next/image";
 import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
