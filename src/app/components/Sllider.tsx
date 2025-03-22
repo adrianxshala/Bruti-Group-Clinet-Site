@@ -14,7 +14,7 @@ import "swiper/css/pagination";
 import { motion } from "framer-motion";
 
 const slides1 = [
-  "/assets/presa.jpg",
+  "/assets/Untitled.png",
   "/assets/presa.jpg",
   "/assets/presa.jpg",
   "/assets/presa.jpg",

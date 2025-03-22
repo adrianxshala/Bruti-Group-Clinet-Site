@@ -1,8 +1,26 @@
 "use client"; // Needed for animations in Next.js (App Router)
 import { motion } from "framer-motion";
 
+const letterVariants = {
+  hidden: { opacity: 0, filter: 'blur(5px)' },
+  visible: {
+    opacity: 1,
+    filter: 'blur(0px)',
+    transition: { duration: 0.4, ease: 'easeOut' },
+  },
+};
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.06, // Slightly increased stagger duration for a smoother effect
+    },
+  },
+};
+
 export default function HeroSection() {
-  const title = "Your Text Here"; // Animated text
+  const text = 'Bruti Group'; // Text before Neon Electric
 
   return (
     <section
@@ -14,23 +32,24 @@ export default function HeroSection() {
       }}
     >
       {/* Overlay for better readability */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
       <div className="relative z-10 text-center w-full max-w-4xl">
         {/* Animated Title */}
-        <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-400 flex justify-center">
-          {title.split("").map((char, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.05, delay: index * 0.1 }}
-            >
-              {char}
-            </motion.span>
-          ))}
-        </h1>
+        <motion.h1
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+        className="text-3xl md:text-5xl lg:text-6xl font-bold " // Adjusted font sizes for mobile
+      >
+        {text.split('').map((char, index) => (
+          <motion.span key={index} variants={letterVariants} className="inline-block">
+            {char === ' ' ? '\u00A0' : char} {/* Handle spaces */}
+          </motion.span>
+        ))}
+      </motion.h1>
+      
 
         {/* Subtitle */}
         <motion.p
