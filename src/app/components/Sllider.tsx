@@ -15,11 +15,11 @@ import { motion } from "framer-motion";
 
 const slides1 = [
   "/assets/Untitled.png",
+  "/assets/presa.jpg",
   "/assets/Untitled.png",
+  "/assets/presa.jpg",
   "/assets/Untitled.png",
-  "/assets/Untitled.png",
-  "/assets/Untitled.png",
-  "/assets/Untitled.png",
+  "/assets/presa.jpg",
 
 ];
 
