@@ -24,3 +24,86 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes gridAnimation1 {
+  0% { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+@keyframes gridAnimation2 {
+  0% { background-position: 0 0; }
+  100% { background-position: 120px 120px; }
+}
+
+@keyframes glowEffect {
+  0% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.5); }
+  50% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.8); }
+  100% { box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.5); }
+}
+
+.bg-grid {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1));
+}
+
+.bg-grid::before,
+.bg-grid::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridAnimation1 10s linear infinite;
+  z-index: 1;
+}
+
+.bg-grid::after {
+  background-size: 100px 100px;
+  animation: gridAnimation2 15s linear infinite;
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.bg-grid:hover::before,
+.bg-grid:hover::after {
+  animation-play-state: paused;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.1), transparent);
+  animation: glowEffect 3s ease-in-out infinite;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.grid-interactive {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background: rgba(0, 255, 255, 0.1);
+  border: 2px solid rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  animation: glowEffect 3s ease-in-out infinite;
+  z-index: 4;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.grid-interactive:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+}
