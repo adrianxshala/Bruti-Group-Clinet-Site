@@ -38,12 +38,12 @@ const AboutSection = () => {
           <div className="space-y-10">
             <div className="grid grid-cols-2 gap-6">
               {[
-                { value: 100, label: "Projekte të përfunduara", color: "yellow-600" },
+                { value: 100, label: "Projekte të përfunduara", color: "from-green-950 via-green-900 to-cyan-500" },
                 { value: 20, label: "Partnerë të besuar", color: "blue-400" },
                 { value: 500, label: "Klientë të kënaqur", color: "green-500" },
                 { value: 25, label: "Vite eksperiencë", color: "gray-300" },
               ].map((item, index) => (
-                <div key={index} className={`relative p-6 rounded-3xl border border-${item.color} bg-black shadow-lg`}>
+                <div key={index} className={`relative p-6 rounded-3xl border border-green-950 bg-black shadow-lg glow`}>
                   <div className={`text-4xl font-extrabold text-${item.color}`}>
                     {startCounting ? <CountUp end={item.value} duration={3} /> : 0}
                   </div>

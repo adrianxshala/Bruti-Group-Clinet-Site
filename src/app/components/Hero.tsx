@@ -34,7 +34,7 @@ export default function HeroSection() {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="text-5xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-850 via-blue-600 to-cyan-300 drop-shadow-lg"
+          className="text-5xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 drop-shadow-lg"
           >
           
           Bruti Group
@@ -56,7 +56,7 @@ export default function HeroSection() {
   animate={{ opacity: 1, scale: 1 }}
   transition={{ duration: 0.3, delay: 1 }}
   className="mt-6 px-6 py-3 font-semibold rounded-lg shadow-md 
-             bg-gradient-to-r from-blue-950 via-blue-800 to-cyan-400 
+             bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 
              text-white hover:from-blue-900 hover:via-blue-700 hover:to-cyan-300 
              transition duration-300"
 >

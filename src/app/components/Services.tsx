@@ -23,7 +23,7 @@ const sherbimet = [
 
 const Sherbimet = () => {
   return (
-    <section id="sherbimet" className="relative overflow-hidden bg-grid flex items-center justify-center h-screen">
+    <section id="sherbimet" className="relative overflow-hidden bg-grid flex items-center justify-center h-screen py-20">
       {/* Sfondi me rrjetë (grid) */}
       <div className="absolute inset-0 z-0 h-screen">
         <div className="grid-overlay"></div>
