@@ -68,7 +68,7 @@ const AboutSection = () => {
               width={600}
               height={400}
               loading="lazy"
-              className="relative rounded-xl shadow-2xl"
+              className="relative rounded-xl shadow-3xl"
             />
           </div>
         </div>
