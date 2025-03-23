@@ -1,14 +1,7 @@
 "use client"; // Needed for animations in Next.js (App Router)
 import { motion } from "framer-motion";
 
-const letterVariants = {
-  hidden: { opacity: 0, filter: 'blur(5px)' },
-  visible: {
-    opacity: 1,
-    filter: 'blur(0px)',
-    transition: { duration: 0.4, ease: 'easeOut' },
-  },
-};
+
 
 const containerVariants = {
   hidden: {},
@@ -20,7 +13,7 @@ const containerVariants = {
 };
 
 export default function HeroSection() {
-  const text = 'Bruti Group'; // Text before Neon Electric
+ 
 
   return (
     <section
@@ -38,18 +31,14 @@ export default function HeroSection() {
       <div className="relative z-10 text-center w-full max-w-4xl">
         {/* Animated Title */}
         <motion.h1
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-        className="text-3xl md:text-5xl lg:text-6xl font-bold " // Adjusted font sizes for mobile
-      >
-        {text.split('').map((char, index) => (
-          <motion.span key={index} variants={letterVariants} className="inline-block">
-            {char === ' ' ? '\u00A0' : char} {/* Handle spaces */}
-          </motion.span>
-        ))}
-      </motion.h1>
-      
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+          className="text-5xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-850 via-blue-600 to-cyan-300 drop-shadow-lg"
+          >
+          
+          Bruti Group
+        </motion.h1>
 
         {/* Subtitle */}
         <motion.p
@@ -63,13 +52,17 @@ export default function HeroSection() {
 
         {/* CTA Button */}
         <motion.button
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3, delay: 1 }}
-          className="mt-6 px-6 py-3 bg-blue-500 hover:bg-blue-600 transition text-white font-semibold rounded-lg shadow-md"
-        >
-          Get Started
-        </motion.button>
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.3, delay: 1 }}
+  className="mt-6 px-6 py-3 font-semibold rounded-lg shadow-md 
+             bg-gradient-to-r from-blue-950 via-blue-800 to-cyan-400 
+             text-white hover:from-blue-900 hover:via-blue-700 hover:to-cyan-300 
+             transition duration-300"
+>
+  Get Started
+</motion.button>
+
       </div>
     </section>
   );

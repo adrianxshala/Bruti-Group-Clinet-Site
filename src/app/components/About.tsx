@@ -1,75 +1,80 @@
-// import React, { useRef } from "react";
-// import { motion, useInView } from "framer-motion";
-// import { Card } from "@/components/ui/card";
-// import CountUp from "react-countup";
+"use client";
 
-// const About = () => {
-//   const ref = useRef(null);
-//   const isInView = useInView(ref, { once: true });
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import CountUp from "react-countup";
 
-//   const stats = [
-//     { value: 25, suffix: "", label: "Vite përvoj" },
-//     { value: 70, suffix: "", label: "Ekipi i ekspertëve" },
-//     { value: 7, suffix: "", label: "Qytetet e shërbyera" },
-//     { value: 98, suffix: "%", label: "98" },
-//   ];
+const AboutSection = () => {
+  const [startCounting, setStartCounting] = useState(false);
 
-//   return (
-//     <section id="about" className="py-16 relative">
-//       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="max-w-6xl mx-auto text-center">
-//           <motion.h2
-//             initial={{ opacity: 0, y: 20 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             transition={{ duration: 0.9, delay: 0.1 }}
-//             className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 glow"
-//           >
-//             Rreth Nesh
-//           </motion.h2>
-//           <Card className="p-6 sm:p-8 bg-black/40 card-glow border-white/10">
-//             <motion.p
-//               initial={{ opacity: 0, y: 20 }}
-//               whileInView={{ opacity: 1, y: 0 }}
-//               transition={{ duration: 1, delay: 0.3 }}
-//               className="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed"
-//             >
-//               Që nga themelimi ynë në vitin 2000, ne kemi qenë në ballë të
-//               risi furnizimi me energji elektrike. Angazhimi ynë për cilësinë dhe
-//               besueshmëria na ka bërë një partner të besueshëm për kontraktorët,
-//               industritë dhe pronarët e shtëpive në të gjithë vendin.
-//             </motion.p>
-//             <div
-//               ref={ref}
-//               className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6"
-//             >
-//               {stats.map((stat, index) => (
-//                 <motion.div
-//                   key={index}
-//                   initial={{
-//                     opacity: 0,
-//                     x: index % 2 === 0 ? -20 : 20,
-//                   }}
-//                   whileInView={{ opacity: 1, x: 0 }}
-//                   transition={{ duration: 1.1, delay: 0.5 }}
-//                   className="text-center"
-//                 >
-//                   <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1 sm:mb-2">
-//                     {isInView && (
-//                       <CountUp start={0} end={stat.value} duration={8} />
-//                     )}{" "}
-//                     {stat.suffix}
-//                   </h3>
-//                   <p className="text-gray-400 text-sm sm:text-base lg:text-lg">
-//                     {stat.label}
-//                   </p>
-//                 </motion.div>
-//               ))}
-//             </div>
-//           </Card>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.getElementById("about");
+      if (section) {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < window.innerHeight - 100) {
+          setStartCounting(true);
+          window.removeEventListener("scroll", handleScroll); // Remove event listener after starting count
+        }
+      }
+    };
 
-// export default About;
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <section id="about" className="relative py-20 overflow-hidden bg-grid">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+        <header className="text-center mb-8">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow">
+            Rreth Nesh
+          </h2>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            Ne jemi lider në ndërtimet komerciale, duke sjellë inovacion, cilësi dhe qëndrueshmëri në çdo projekt që realizojmë.
+          </p>
+        </header>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div className="space-y-10">
+            <div className="grid grid-cols-2 gap-6">
+              {[
+                { value: 100, label: "Projekte të përfunduara", color: "yellow-600" },
+                { value: 20, label: "Partnerë të besuar", color: "blue-400" },
+                { value: 500, label: "Klientë të kënaqur", color: "green-500" },
+                { value: 25, label: "Vite eksperiencë", color: "gray-300" },
+              ].map((item, index) => (
+                <div key={index} className={`relative p-6 rounded-3xl border border-${item.color} bg-black shadow-lg`}>
+                  <div className={`text-4xl font-extrabold text-${item.color}`}>
+                    {startCounting ? <CountUp end={item.value} duration={3} /> : 0}
+                  </div>
+                  <div className="mt-2 text-sm text-gray-600">{item.label}</div>
+                </div>
+              ))}
+            </div>
+            <div className="hidden md:block">
+              <h2 className="text-xl sm:text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow">
+                Misioni ynë
+              </h2>
+              <p className="text-gray-600">
+                Të ofrojmë zgjidhje ndërtimi cilësore dhe të qëndrueshme, duke transformuar idetë në realitet me teknologji të avancuar dhe ekspertizë të lartë.
+              </p>
+            </div>
+          </div>
+          <div className="relative">
+            <Image
+              src="/assets/presa.jpg"
+              alt="Ndërtimi Komercial – Rreth Nesh"
+              title="Ndërtimi Komercial – Rreth Nesh"
+              width={600}
+              height={400}
+              loading="lazy"
+              className="relative rounded-xl shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
