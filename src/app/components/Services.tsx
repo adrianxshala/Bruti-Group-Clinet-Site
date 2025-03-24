@@ -23,7 +23,7 @@ const sherbimet = [
 
 const Sherbimet = () => {
   return (
-    <section id="sherbimet" className="relative overflow-hidden bg-grid flex items-center justify-center h-screen py-20">
+    <section id="sherbimet" className="relative overflow-hidden bg-grid flex items-center justify-center  ">
       {/* Sfondi me rrjetë (grid) */}
       <div className="absolute inset-0 z-0 h-screen">
         <div className="grid-overlay"></div>
@@ -31,7 +31,7 @@ const Sherbimet = () => {
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.h2
-          className="text-3xl sm:text-4xl font-bold mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow"
+          className="text-3xl sm:text-4xl font-bold py-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6,delay: 0.5 }}
@@ -48,15 +48,15 @@ const Sherbimet = () => {
           Ne ofrojmë zgjidhje ndërtimi dhe menaxhimi të nivelit të lartë për projekte komerciale dhe industriale, duke garantuar cilësi dhe efikasitet.
         </motion.p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 ">
           {sherbimet.map((sherbim, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, scale: 0.75 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{
                 duration: 1,
-                delay: index * 0.9,
+                delay:  0.9,
                 type: 'spring',
                 stiffness: 300,
                 damping: 20,
