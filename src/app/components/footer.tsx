@@ -12,7 +12,7 @@ export default function Footer() {
     <motion.footer
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="bg-background/90 backdrop-blur-lg border-t border-border mt-20"
+      className="bg-background/90 backdrop-blur-lg border-t border-green-900 mt-20"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
         <div className="flex justify-around ">
@@ -112,7 +112,7 @@ export default function Footer() {
           </motion.div>
         </div>
 
-        <div className="mt-8 pt-5  border-t border-border text-center text-sm text-muted-foreground">
+        <div className="mt-8 pt-5  border-t border-green-900 text-center text-sm text-muted-foreground">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

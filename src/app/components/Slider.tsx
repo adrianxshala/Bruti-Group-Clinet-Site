@@ -43,9 +43,11 @@ const Slider = () => {
 </motion.p>
 
     </div>
-     <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg ">
-      <div className="relative flex items-center justify-center h-[500px] rounded-lg">
-        <img src={images[currentIndex]} alt="Slide" className="w-full h-full object-cover transition-transform duration-500 ease-in-out p-8 rounded-lg opacity-80" />
+     <motion.div initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1,delay: 0.9 }} className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg p-8 ">
+      <div  className="relative flex items-center justify-center h-[500px] rounded-lg ">
+        <img src={images[currentIndex]} alt="Slide" className="border-2 border-green-700 w-full h-full object-cover transition-transform duration-500 ease-in-out  rounded-lg opacity-80" />
       </div>
 
       <button 
@@ -90,7 +92,7 @@ const Slider = () => {
           }
         }
       `}</style>
-    </div>
+    </motion.div>
    </div>
   );
 };

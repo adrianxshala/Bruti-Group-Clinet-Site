@@ -99,7 +99,7 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.6 }}
-            className="fixed inset-y-0 right-0 w-64 bg-background/50 backdrop-blur-lg shadow-lg z-50 flex flex-col p-6"
+            className="fixed inset-y-0 right-0 w-64 bg-background/50 backdrop-blur-lg shadow-lg z-50 flex flex-col p-6 border border-green-900"
           >
             {/* Close Button */}
             <button
@@ -126,7 +126,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a href="tel:+38349264779">
-                <button className="bg-black hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors">
+                <button className="bg-black hover:bg-blue-600 text-white px-4 py-2 rounded-md transition-colors border border-green-900">
                   Contact Us
                 </button>
               </a>

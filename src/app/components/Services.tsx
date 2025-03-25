@@ -52,16 +52,17 @@ const Sherbimet = () => {
           {sherbimet.map((sherbim, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.75 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{
                 duration: 1,
-                delay:  0.9,
+                delay:  1.2,
                 type: 'spring',
                 stiffness: 300,
                 damping: 20,
               }}
             >
+            
               {/* Kontejneri i kartës */}
               <div className="relative p-6 sm:p-8 bg-black/10 border border-white/10 rounded-xl flex flex-col items-center text-center h-full backdrop-blur-md overflow-hidden">
                 <div className="text-white mb-4 sm:mb-6">{sherbim.icon}</div>
