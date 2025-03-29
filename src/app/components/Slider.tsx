@@ -2,10 +2,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 const images = [
-  "/assets/presa.jpg",
+  "/assets/about.png",
   "/assets/Untitled.png",
-  "/assets/presa.jpg",
-  "/assets/Untitled.png",
+  "/assets/about2.png",
+  "/assets/about3.png",
 ];
 
 const Slider = () => {
@@ -22,7 +22,7 @@ const Slider = () => {
   };
 
   return (
-   <div className='bg-grid '>
+   <div className='bg-grid mt-20 '>
     <div>
     <motion.h2
   className="text-3xl sm:text-4xl font-bold py-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow"
@@ -47,7 +47,7 @@ const Slider = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1,delay: 0.9 }} className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg p-8 ">
       <div  className="relative flex items-center justify-center h-[500px] rounded-lg ">
-        <img src={images[currentIndex]} alt="Slide" className="border-2 border-green-700 w-full h-full object-cover transition-transform duration-500 ease-in-out  rounded-lg opacity-80" />
+        <img src={images[currentIndex]} alt="Slide" className="border-2 border-green-700 w-full h-full object-cover transition-transform duration-500 ease-in-out  rounded-lg opacity-100" />
       </div>
 
       <button 

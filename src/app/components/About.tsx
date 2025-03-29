@@ -24,7 +24,7 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section id="about" className="relative py-20 overflow-hidden bg-grid">
+    <section id="about" className="relative  overflow-hidden bg-grid">
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         <header className="text-center mb-8">
           <motion.h2
@@ -91,13 +91,13 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7,delay: 0.7 }} className="relative ">
             <Image
-              src="/assets/Untitled.png"
+              src="/assets/about.png"
               alt="Ndërtimi Komercial – Rreth Nesh"
               title="Ndërtimi Komercial – Rreth Nesh"
               width={600}
               height={400}
               loading="lazy"
-              className="relative rounded-xl shadow-3xl opacity-60 border border-green-600"
+              className="relative rounded-xl shadow-3xl opacity-90 border border-green-600"
             />
           </motion.div>
         </div>

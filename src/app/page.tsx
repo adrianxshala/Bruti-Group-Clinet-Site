@@ -4,7 +4,7 @@ import Products from "./components/Services";
 import Footer from "./components/footer";
 import AboutSection from "./components/About";
 import Slider from "./components/Slider";
-
+import Contact from "./components/Contact"; 
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
      <Slider/>
       <Products />
       <AboutSection />
+      <Contact />
       <Footer />
     </div>
   );
