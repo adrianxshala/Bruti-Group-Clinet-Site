@@ -25,7 +25,7 @@ const AboutSection = () => {
 
   return (
     <section id="about" className="relative  overflow-hidden bg-grid">
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto mt-20 px-6 lg:px-8">
         <header className="text-center mb-8">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

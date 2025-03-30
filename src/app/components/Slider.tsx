@@ -22,10 +22,10 @@ const Slider = () => {
   };
 
   return (
-   <div className='bg-grid mt-20 '>
+   <div className='bg-grid  '>
     <div>
     <motion.h2
-  className="text-3xl sm:text-4xl font-bold py-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow"
+  className="text-3xl sm:text-4xl font-bold pt-20 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow"
   initial={{ opacity: 0, y: 20 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6, delay: 0.5 }}
@@ -34,7 +34,7 @@ const Slider = () => {
 </motion.h2>
 
 <motion.p
-  className="text-gray-400 text-center max-w-2xl mx-auto"
+  className="text-gray-400 text-center max-w-2xl mx-auto pt-4"
   initial={{ opacity: 0, y: 20 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.9, delay: 0.7 }}
