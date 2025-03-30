@@ -18,10 +18,18 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-3xl sm:text-4xl font-bold pb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow"
+            className="text-3xl sm:text-4xl font-bold pb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow"
           >
             Na Kontaktoni
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="text-gray-600 max-w-3xl mx-auto pb-8 text-center"
+          >
+          Keni ndonjë pyetje? Mos ngurroni të kontaktoni!
+          </motion.p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative">
           {/* Background element for blur to work against */}
           <div className="absolute inset-0 -z-10 bg-gradient-to-br from-blue-900/20 to-purple-900/20" />
@@ -70,15 +78,15 @@ const Contact = () => {
           <div className="space-y-6">
             <div className="p-8 backdrop-blur-lg bg-black/40 border border-green-900 rounded-lg">
               <div className="space-y-6">
-                <div className="flex items-center space-x-4 text-white">
+                <div className="flex items-center space-x-4 text-gray-300">
                   <Phone className="w-6 h-6" />
                   <p>+383 (43) 700-402</p>
                 </div>
-                <div className="flex items-center space-x-4 text-white">
+                <div className="flex items-center space-x-4 text-gray-300">
                   <Mail className="w-6 h-6" />
                   <p>brutigroup@gmail.com</p>
                 </div>
-                <div className="flex items-center space-x-4 text-white">
+                <div className="flex items-center space-x-4 text-gray-300">
                   <MapPin className="w-6 h-6" />
                   <p>23000 Suharekë,Prizren,Kosovë</p>
                 </div>

@@ -9,7 +9,7 @@ import about2 from "../../../public/assets/about3.png";
 
 const Page = () => {
   return (
-    <div className="container mx-auto px-4 py-12  ">
+    <div className="container mx-auto px-4 py-20  ">
       <h2 className="text-3xl font-bold text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow">Projektet e Perfunduara</h2>
 
       {/* Image Grid */}

@@ -65,7 +65,7 @@ export default function Footer() {
                 className="flex items-center space-x-2"
               >
                 <Phone className="h-4 w-4" />
-                <span>+ (383) 49 264-779</span>
+                <span>+ (383) 43 700-402</span>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
@@ -75,7 +75,7 @@ export default function Footer() {
                 className="flex items-center space-x-2"
               >
                 <Mail className="h-4 w-4" />
-                <span>lardiinvestshpk@gmail.com</span>
+                <span>brutigroup@gmail.com</span>
               </motion.div>
             </div>
           </div>
