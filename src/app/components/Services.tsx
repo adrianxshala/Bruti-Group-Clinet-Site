@@ -23,13 +23,13 @@ const sherbimet = [
 
 const Sherbimet = () => {
   return (
-    <section id="sherbimet" className="relative overflow-hidden bg-grid flex items-center justify-center  ">
+    <section id="sherbimet" className="relative overflow-hidden bg-grid flex items-center justify-center  pb-8 ">
       {/* Sfondi me rrjetë (grid) */}
       <div className="absolute inset-0 z-0 h-screen">
         <div className="grid-overlay"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+      <div className="container mx-auto  px-4 sm:px-6 relative z-10">
         <motion.h2
           className="text-3xl sm:text-4xl font-bold py-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow"
           initial={{ opacity: 0, y: 20 }}

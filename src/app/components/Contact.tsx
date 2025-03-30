@@ -12,13 +12,13 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" className=" relative bg-grid ">
-      <div className="container mx-auto px-6 mt-20">
+    <section id="contact" className="  bg-grid ">
+      <div className="container mx-auto px-6 pt-8 ">
       <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-3xl sm:text-4xl font-bold pb-20 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow"
+            className="text-3xl sm:text-4xl font-bold pb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow"
           >
             Na Kontaktoni
           </motion.h2>
