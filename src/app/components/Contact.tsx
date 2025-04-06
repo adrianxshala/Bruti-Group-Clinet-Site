@@ -41,7 +41,9 @@ const Contact = () => {
               transition={{ duration: 0.5 }}
               className="relative"
             >
-              <div className="p-8 bg-black border border-green-900 rounded-lg">
+              <motion.div   initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }} className="p-8 bg-black border border-green-900 rounded-lg">
                 <form className="space-y-6">
                   <div>
                     <input
@@ -71,12 +73,12 @@ const Contact = () => {
                     Send Message
                   </button>
                 </form>
-              </div>
+              </motion.div>
             </motion.div>
           )}
 
-          <div className="space-y-6">
-            <div className="p-8 backdrop-blur-lg bg-black/40 border border-green-900 rounded-lg">
+          <div className="space-y-6 ">
+            <div className="p-8 backdrop-blur-lg bg-black/40 border border-green-900 rounded-lg hidden md:block">
               <div className="space-y-6">
                 <div className="flex items-center space-x-4 text-gray-300">
                   <Phone className="w-6 h-6" />
@@ -93,7 +95,9 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="h-[300px] rounded-2xl overflow-hidden border border-green-900  relative hidden md:block">
+            <motion.div   initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }} className="h-[300px] rounded-2xl overflow-hidden border border-green-900  relative ">
               <div className="absolute inset-0 backdrop-blur-sm bg-black/20" />
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11759.158684525246!2d20.8153153156619!3d42.5416440791776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1352f8b8a8c7c5d5%3A0x8a4a4a4a4a4a4a4a!2sSuva%20Reka%2C%20Kosovo!5e0!3m2!1sen!2s!4v1650000000000!5m2!1sen!2s"
@@ -105,7 +109,7 @@ const Contact = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="relative z-10"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

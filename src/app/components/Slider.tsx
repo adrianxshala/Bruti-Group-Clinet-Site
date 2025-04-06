@@ -22,7 +22,7 @@ const Slider = () => {
   };
 
   return (
-   <div className='bg-grid  '>
+   <div className='bg-grid pb-20 '>
     <div>
     <motion.h2
   className="text-3xl sm:text-4xl font-bold pt-20 text-center text-transparent bg-clip-text bg-gradient-to-r from-green-950 via-green-900 to-cyan-500 glow"
@@ -46,7 +46,7 @@ const Slider = () => {
      <motion.div initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1,delay: 0.9 }} className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg p-8 ">
-      <div  className="relative flex items-center justify-center h-[500px] rounded-lg ">
+      <div  className="relative flex items-center justify-center h-[500px] rounded-lg  ">
         <img src={images[currentIndex]} alt="Slide" className="border-2 border-green-700 w-full h-full object-cover transition-transform duration-500 ease-in-out  rounded-lg opacity-100" />
       </div>
 

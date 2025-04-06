@@ -89,7 +89,7 @@ const AboutSection = () => {
           </div>
           <motion.div   initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7,delay: 0.7 }} className="relative pt-12 ">
+          transition={{ duration: 0.7,delay: 0.7 }} className="relative pt-12 pl-0 md:pl-8 ">
             <Image
               src="/assets/about.png"
               alt="Ndërtimi Komercial – Rreth Nesh"
@@ -97,7 +97,7 @@ const AboutSection = () => {
               width={600}
               height={400}
               loading="lazy"
-              className="relative rounded-xl shadow-3xl opacity-90 border border-green-600 "
+              className="relative rounded-xl shadow-3xl opacity-80 border border-green-600 "
             />
           </motion.div>
         </div>
