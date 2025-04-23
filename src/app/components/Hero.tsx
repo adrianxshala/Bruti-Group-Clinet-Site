@@ -10,7 +10,7 @@ export default function HeroSection() {
     <section
       className="h-screen flex flex-col items-center justify-center text-white relative bg-black px-6 md:px-12"
       style={{
-        backgroundImage: "url('/assets/about.png')",
+        backgroundImage: "url('/assets/hero.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}

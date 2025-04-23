@@ -2,7 +2,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 const images = [
+  "/assets/amra.jpg",
+  "/assets/hero.jpg",
   "/assets/about.png",
+  
   "/assets/Untitled.png",
   "/assets/about2.png",
   "/assets/about3.png",
