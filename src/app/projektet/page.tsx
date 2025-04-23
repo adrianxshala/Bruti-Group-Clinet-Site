@@ -6,8 +6,7 @@ import { motion } from "framer-motion";
 import about from "../../../public/assets/about.png";
 import about1 from "../../../public/assets/about2.png";
 import about2 from "../../../public/assets/about3.png";
-import about3 from "../../../public/assets/hero.jpg";
-import about4 from "../../../public/assets/amra.jpg";
+
 
 const Page = () => {
   return (
