@@ -91,7 +91,7 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7,delay: 0.7 }} className="relative pt-12 pl-0 md:pl-8 ">
             <Image
-              src="/assets/amra.jpg"
+              src="/assets/amra.png"
               alt="Ndërtimi Komercial – Rreth Nesh"
               title="Ndërtimi Komercial – Rreth Nesh"
               width={600}
